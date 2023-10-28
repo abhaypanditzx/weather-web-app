@@ -85,8 +85,10 @@ function App() {
     >
       <div className="flex flex-col p-5 w-full h-fit text-white">
         <div className="text-lg capitalize text-white">{`${day}, ${date} ${month} ${year}`}</div>
-        <div className="text-sm capitalize text-gray-300">new delhi india</div>
+        <div className="text-sm capitalize text-gray-300"> </div>
+        {/* add your locatin top */}
       </div>
+
 
       <div className="w-full h-fit flex relative items-center space-x-[3rem] max-lg:space-x-2 p-5 justify-center text-white">
         <img className="w-[11rem] max-lg:w-[7rem]" src={img} />
