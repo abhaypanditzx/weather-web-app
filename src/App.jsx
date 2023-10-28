@@ -88,7 +88,7 @@ function App() {
         <div className="text-sm capitalize text-gray-300">new delhi india</div>
       </div>
 
-      <div className="w-full h-fit flex relative items-center space-x-[3rem] p-5 justify-center text-white">
+      <div className="w-full h-fit flex relative items-center space-x-[3rem] max-lg:space-x-2 p-5 justify-center text-white">
         <img className="w-[11rem] max-lg:w-[7rem]" src={img} />
         <div>
           <div className="text-[5rem] max-lg:text-[3rem] capitalize w-[10rem]  text-white">
@@ -101,7 +101,7 @@ function App() {
       </div>
       <div className="w-[100%] h-[30rem] max-[426px]:w-[19rem] max-md:top-[4rem] max-lg:w-[30rem] max-[321px]:w-[19rem]  max-sm:w-[100%] flex relative max-[321px]:top-8 top-0 flex-col items-center  rounded-md ">
         <ul className="text-white w-full  h-full justify-around items-center max-lg:flex-col text-sm  flex  max-[426px]:flex-col flex-row   ">
-          <li className="w-[15rem] h-[15rem] max-[426px]:w-[19rem] max-lg:w-[30rem] relative rounded-full max-[769px]:relative overflow-hidden flex-col max-[769px]:flex-row  max-[321px]:w-[18rem] max-[769px]:h-[6rem]  bg-[#213363] max-[769px]:rounded-[25px] justify-around items-center flex space-x-0 max-[769px]:space-x-2">
+          <li className="w-[15rem] max-[480px]:w-[24rem] h-[15rem] max-[426px]:w-[19rem] max-lg:w-[30rem] relative rounded-full max-[769px]:relative overflow-hidden flex-col max-[769px]:flex-row  max-[321px]:w-[18rem] max-[769px]:h-[6rem]  bg-[#213363] max-[769px]:rounded-[25px] justify-around items-center flex space-x-0 max-[769px]:space-x-2">
             <div className="flex items-center absolute top-5 max-sm:relative max-lg:top-0 max-lg:relative p-2 h-fit max-[769px]:h-full  space-x-2">
               <img className="max-[426px]:h-[2.3rem] h-[2rem]" src={windIcon} />
               <div className="text-[1rem]"> wind </div>
@@ -111,7 +111,7 @@ function App() {
             </span>
           </li>
 
-          <li className="w-[15rem] h-[15rem] max-[426px]:w-[19rem] max-lg:w-[30rem] relative rounded-full max-[769px]:relative overflow-hidden flex-col max-[769px]:flex-row  max-[321px]:w-[18rem] max-[769px]:h-[6rem]  bg-[#213363] max-[769px]:rounded-[25px] justify-around items-center flex space-x-0 max-[769px]:space-x-2">
+          <li className="w-[15rem] max-[480px]:w-[24rem] h-[15rem] max-[426px]:w-[19rem] max-lg:w-[30rem] relative rounded-full max-[769px]:relative overflow-hidden flex-col max-[769px]:flex-row  max-[321px]:w-[18rem] max-[769px]:h-[6rem]  bg-[#213363] max-[769px]:rounded-[25px] justify-around items-center flex space-x-0 max-[769px]:space-x-2">
             <div className="flex items-center absolute top-5 max-sm:relative max-lg:top-0 max-lg:relative p-2 h-fit max-[769px]:h-full  space-x-2">
               <img
                 className="max-[426px]:h-[2.3rem] h-[2rem]"
@@ -124,7 +124,7 @@ function App() {
             </span>
           </li>
 
-          <li className="w-[15rem] h-[15rem] max-[426px]:w-[19rem] max-lg:w-[30rem] relative rounded-full max-[769px]:relative overflow-hidden flex-col max-[769px]:flex-row  max-[321px]:w-[18rem] max-[769px]:h-[6rem]  bg-[#213363] max-[769px]:rounded-[25px] justify-around items-center flex space-x-0 max-[769px]:space-x-2">
+          <li className="w-[15rem] max-[480px]:w-[24rem] h-[15rem] max-[426px]:w-[19rem] max-lg:w-[30rem] relative rounded-full max-[769px]:relative overflow-hidden flex-col max-[769px]:flex-row  max-[321px]:w-[18rem] max-[769px]:h-[6rem]  bg-[#213363] max-[769px]:rounded-[25px] justify-around items-center flex space-x-0 max-[769px]:space-x-2">
             <div className="flex items-center absolute top-5 max-sm:relative max-lg:top-0 max-lg:relative p-2 h-fit max-[769px]:h-full  space-x-2">
               <img
                 className="max-[426px]:h-[2.3rem] h-[2rem]"
@@ -137,7 +137,7 @@ function App() {
             </span>
           </li>
 
-          <li className="w-[15rem] h-[15rem] max-[426px]:w-[19rem] max-lg:w-[30rem] relative rounded-full max-[769px]:relative overflow-hidden flex-col max-[769px]:flex-row  max-[321px]:w-[18rem] max-[769px]:h-[6rem]  bg-[#213363] max-[769px]:rounded-[25px] justify-around items-center flex space-x-0 max-[769px]:space-x-2">
+          <li className="w-[15rem] max-[480px]:w-[24rem] h-[15rem] max-[426px]:w-[19rem] max-lg:w-[30rem] relative rounded-full max-[769px]:relative overflow-hidden flex-col max-[769px]:flex-row  max-[321px]:w-[18rem] max-[769px]:h-[6rem]  bg-[#213363] max-[769px]:rounded-[25px] justify-around items-center flex space-x-0 max-[769px]:space-x-2">
             <div className="flex items-center absolute top-5 max-sm:relative max-lg:top-0 max-lg:relative p-2 h-fit max-[769px]:h-full  space-x-2">
               <img
                 className="max-[426px]:h-[2.3rem] h-[2rem]"
