@@ -8,7 +8,7 @@ function ErrorPage() {
 <img className="h-[5rem]" src={errorIcon}/>
 <h1 className="text-[5rem] font-semibold max-sm:text-[2rem] text-white "> Error 403!</h1>
 </div>
-<h5 className="text-xl font-mono max-sm:text-sm text-gray-200 ">plese allow  your location or check  mobile data!</h5>
+<h5 className="text-xl mt-2 font-mono max-sm:text-sm text-gray-200 ">plese allow  your location or check  mobile data!</h5>
 
     </div>
   );
