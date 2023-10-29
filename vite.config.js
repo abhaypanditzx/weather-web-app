@@ -6,13 +6,35 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
   plugins: [react(), VitePWA({
     manifest: {
-      name: 'weather app',
-      short_name: 'my weather',
-      description: 'My Progressive Web App',
-      start_url: '/index.html',
-      display: 'standalone',
-      background_color: '#ffffff',
-      theme_color: '#000000',
+      
+        "short_name": "Weather",
+        "name": "Weather: Do I need an umbrella?",
+        "icons": [
+          {
+            "src": "/images/icons-vector.svg",
+            "type": "image/svg+xml",
+            "sizes": "512x512"
+          },
+          {
+            "src": "/weather-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+          },
+          {
+            "src": "/weather.png",
+            "type": "image/png",
+            "sizes": "512x512"
+          }
+        ],
+        "id": "/?source=pwa",
+        "start_url": "/?source=pwa",
+        "background_color": "#3367D6",
+        "display": "standalone",
+        "scope": "/",
+        "theme_color": "#3367D6",
+       
+        "description": "Weather forecast information"
+      
     }
   })],
 })
