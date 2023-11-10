@@ -21,23 +21,21 @@ function Temprature(props) {
     handelOnChangeIcon();
   });
   return (
-    <div className="w-full  sm:h-[150px] max-xs:h-[110px] sm:space-x-10 h-fit  p-4 my-4 flex backdrop-blur-lg bg-black/90 relative items-center  justify-normal text-white">
-<div className="flex w-fit h-fit  absolute left-10 ">
-<div className="max-xs:text-[2rem] lg:text-[3rem] capitalize  text-white">
-          {myTemp + "°"}
-        </div>
-      <div className="text-sm  text-center flex  items-center space-x-1 relative left-10 w-auto text-gray-300 ">
+    <div className="w-full  sm:h-[150px] max-xs:h-[110px] max-xs:mt-[40px] sm:mt-[-10px] sm:space-x-10 h-fit  p-4 my-4 flex bg-black/0 relative items-center  justify-center text-white">
       <img
-        className="sm:w-[4rem] max-xs:w-[1.4rem] max-lg:w-[3rem]"
+        className="sm:w-[180px] max-xs:w-[120px]  max-lg:w-[6rem]"
         src={weatherIcon}
         alt="Weather icon"
       />
-      <p className=" max-xs:text-[13px] tracking-wider">{sky}</p>
-    </div>
-</div>
-        {/* <div className="">AQI</div> */}
-      
+      <div className="flex w-fit h-fit jusitfy-center items-start flex-col  ">
+        <div className="max-xs:text-[40px] max-lg:text-[3rem] sm:text-[50px] capitalize  text-white">
+          {myTemp + "°"}
+        </div>
 
+        <p className="sm:text-sm max-xs:text-[15px] ml-1   text-gray-300 ">
+          {sky}
+        </p>
+      </div>
     </div>
   );
 }
