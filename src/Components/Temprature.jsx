@@ -21,11 +21,12 @@ function Temprature(props) {
     handelOnChangeIcon();
   });
   return (
-    <div className="w-full sm-[150px] max-xs:h-[110px] sm:space-x-10 h-fit py-2 my-4 flex backdrop-blur-lg bg-black/50 relative items-center  justify-center text-white">
-<div className="max-xs:text-[1.5rem] lg:text-[2.8rem] capitalize  text-white">
+    <div className="w-full  sm:h-[150px] max-xs:h-[110px] sm:space-x-10 h-fit  p-4 my-4 flex backdrop-blur-lg bg-black/90 relative items-center  justify-normal text-white">
+<div className="flex w-fit h-fit  absolute left-10 ">
+<div className="max-xs:text-[2rem] lg:text-[3rem] capitalize  text-white">
           {myTemp + "°"}
         </div>
-      <div className="text-sm capitalize text-center flex  items-center space-x-2 w-auto text-gray-300 ">
+      <div className="text-sm  text-center flex  items-center space-x-1 relative left-10 w-auto text-gray-300 ">
       <img
         className="sm:w-[4rem] max-xs:w-[1.4rem] max-lg:w-[3rem]"
         src={weatherIcon}
@@ -33,6 +34,7 @@ function Temprature(props) {
       />
       <p className=" max-xs:text-[13px] tracking-wider">{sky}</p>
     </div>
+</div>
         {/* <div className="">AQI</div> */}
       
 

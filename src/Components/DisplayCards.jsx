@@ -7,8 +7,8 @@ import pressureIcon from "../assets/pressure-.png";
 function Display(props) {
   const { wind, myHumidity, myPressure, feelsLike } = props;
   return (
-    <ul className="flex  min-h-full  min-w-full justify-center  sm:justify-center items-center sm:space-x-10  max-xs:space-y-3 sm:space-y-0 sm:flex-row flex-col">
-      <li className=" card-shadow items-center md:w-[200px]  max-xs:h-[70px] max-sm:w-[310px] max-xs:w-[280px]  rounded-xl  relative justify-around overflow-hidden  sm:rounded-xl min-h-[50px] sm:h-[300px] sm:w-[150px] bg-[#213363] flex sm:flex-col flex-row">
+    <ul className="flex  min-h-full  min-w-full justify-center  sm:justify-center items-center sm:space-x-10  max-sm:space-y-3 sm:space-y-0 sm:flex-row flex-col">
+      <li className=" card-shadow items-center md:w-[200px]  max-xs:h-[70px] max-sm:w-[310px] max-xs:w-[290px]  rounded-xl  relative justify-around overflow-hidden  sm:rounded-xl min-h-[50px] sm:h-[300px] sm:w-[150px] bg-[#213363] flex sm:flex-col flex-row">
         <div className="flex items-center sm:absolute sm:top-0  sm:bg-black/90 sm:w-full p-5  justify-start  space-x-3">
           <img
             className="sm:w-[25px] max-sm:w-6 max-xs:w-8"
@@ -22,7 +22,7 @@ function Display(props) {
         </div>
       </li>
 
-      <li className=" card-shadow items-center md:w-[200px]  max-xs:h-[70px] max-sm:w-[310px] max-xs:w-[280px]  rounded-xl  relative justify-around overflow-hidden  sm:rounded-xl min-h-[50px] sm:h-[300px] sm:w-[150px] bg-[#213363] flex sm:flex-col flex-row">
+      <li className=" card-shadow items-center md:w-[200px]  max-xs:h-[70px] max-sm:w-[310px] max-xs:w-[290px]  rounded-xl  relative justify-around overflow-hidden  sm:rounded-xl min-h-[50px] sm:h-[300px] sm:w-[150px] bg-[#213363] flex sm:flex-col flex-row">
         <div className="flex items-center sm:absolute sm:top-0  sm:bg-black/90 sm:w-full p-5  justify-start  space-x-3">
           <img
             className="sm:w-[25px] max-sm:w-6 max-xs:w-8"
@@ -36,7 +36,7 @@ function Display(props) {
         </div>
       </li>
 
-      <li className=" card-shadow items-center md:w-[200px]  max-xs:h-[70px] max-sm:w-[310px] max-xs:w-[280px]  rounded-xl  relative justify-around overflow-hidden  sm:rounded-xl min-h-[50px] sm:h-[300px] sm:w-[150px] bg-[#213363] flex sm:flex-col flex-row">
+      <li className=" card-shadow items-center md:w-[200px]  max-xs:h-[70px] max-sm:w-[310px] max-xs:w-[290px]  rounded-xl  relative justify-around overflow-hidden  sm:rounded-xl min-h-[50px] sm:h-[300px] sm:w-[150px] bg-[#213363] flex sm:flex-col flex-row">
         <div className="flex items-center sm:absolute sm:top-0  sm:bg-black/90 sm:w-full p-5  justify-start  space-x-3">
           <img
             className="sm:w-[25px] max-sm:w-6 max-xs:w-8"
@@ -50,7 +50,7 @@ function Display(props) {
         </div>
       </li>
 
-      <li className=" card-shadow items-center md:w-[200px]  max-xs:h-[70px] max-sm:w-[310px] max-xs:w-[280px]  rounded-xl  relative justify-around overflow-hidden  sm:rounded-xl min-h-[50px] sm:h-[300px] sm:w-[150px] bg-[#213363] flex sm:flex-col flex-row">
+      <li className=" card-shadow items-center md:w-[200px]  max-xs:h-[70px] max-sm:w-[310px] max-xs:w-[290px]  rounded-xl  relative justify-around overflow-hidden  sm:rounded-xl min-h-[50px] sm:h-[300px] sm:w-[150px] bg-[#213363] flex sm:flex-col flex-row">
         <div className="flex items-center sm:absolute sm:top-0  sm:bg-black/90 sm:w-full p-5  justify-start  space-x-3">
           <img
             className="sm:w-[25px] max-sm:w-6 max-xs:w-8"
