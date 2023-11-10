@@ -11,7 +11,7 @@ function DatePlace(props) {
     country
   } = props;
   return (
-    <div className="flex self-start flex-col sm:ml-3 sm:mt-3 w-fit p-1 h-fit text-white">
+    <div className="flex self-start flex-col sm:ml-5 sm:mt-8 w-fit p-1 h-fit text-white">
       <div className="text-lg capitalize text-white">
         {`${day}, ${date} ${month} ${year}`}
       </div>
