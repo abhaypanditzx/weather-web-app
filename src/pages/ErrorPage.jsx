@@ -1,5 +1,5 @@
 import React from "react";
-import errorIcon from "./assets/cat-error-removebg-preview.png" 
+import errorIcon from "../assets/cat-error-removebg-preview.png" 
 
 function ErrorPage() {
   return (

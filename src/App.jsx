@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-
-import ErrorPage from "./ErrorPage";
-import ShowDataPage from "./ShowDataPage";
-
+import mydata from "./Components";
+import ErrorPage from "./pages/ErrorPage";
+import ShowDataPage from "./pages/ShowDataPage";
 function App() {
   const [wind, setWind] = useState("");
   const [myLat, setMyLat] = useState("");
@@ -18,74 +17,69 @@ function App() {
   const [month, setMonth] = useState("");
   const [country, setCountry] = useState("");
   const [city, setCity] = useState("");
-
-
-  const API_key = "7851ff08bc91848f850087dc175290a4";
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${API_key}&units=metric`;
-
-  const searchForData = async () => {
-    let response = await fetch(url);
-    let data = await response.json();
+  const [isData, setIsData]= useState(false);
+ 
+  const updateTimeZone = () => {
     let currentYear = new Date().getFullYear();
     let currentDate = new Date().getDate();
     let currentMonth = new Date().getMonth();
     let currentDay = new Date().getDay();
-
-    let monthNames = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    let dayNames = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-
+    setYear(currentYear);
+    setDay(mydata.dayNames[currentDay]);
+    setDate(currentDate);
+    setMonth(mydata.monthNames[currentMonth]);
+  };
+  const updateLocation = () => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(function (position) {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         setMyLat(latitude);
         setMyLon(longitude);
-        setWind(data.wind.speed);
-        setMyTemp(data.main.temp);
-        setFeelsLike(data.main.feels_like);
-        setMyHumidity(data.main.humidity);
-        setMyPressure(data.main.pressure);
-        setYear(currentYear);
-        setDay(dayNames[currentDay]);
-        setDate(currentDate);
-        setMonth(monthNames[currentMonth]);
-        setSky(data.weather[0].main);
-        setCountry(data.sys.country);
-        setCity(data.name)
-       
       });
     } else {
       console.log("Geolocation is not available");
     }
   };
+  const searchForData = async (url) => {
+    try {
+      const response = await fetch(url);
+      if (response.ok) {
+        const { wind, main, weather, sys, name } = await response.json();
+        setWind(wind.speed);
+        setMyTemp(main.temp);
+        setFeelsLike(main.feels_like);
+        setMyHumidity(main.humidity);
+        setMyPressure(main.pressure);
+        setSky(weather[0].main);
+        setCountry(sys.country);
+        setCity(name);
+      } else {
+        console.log("API request failed" + response.status);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
-    searchForData();
-  });
+    updateTimeZone();
+    updateLocation();
+    const API_key = "7851ff08bc91848f850087dc175290a4";
+    if (myLon && myLat) {
+      let url = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${API_key}&units=metric`;
+
+      searchForData(url);
+      setIsData(true)
+    } else {
+      console.log("Invalid latitude and longitude values.");
+      setIsData(false);
+    }
+  }, [myLat, myLon]);
 
   return (
     <>
-      {myLat && myLon ? (
+      { isData ? (
         <ShowDataPage
           wind={wind}
           year={year}
@@ -108,3 +102,4 @@ function App() {
 }
 
 export default App;
+
