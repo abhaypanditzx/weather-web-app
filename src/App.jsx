@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState ,useContext} from "react";
 import mydata from "./Components";
 import ErrorPage from "./pages/ErrorPage";
 import ShowDataPage from "./pages/ShowDataPage";
+import userContext from "./utils/UserContext"
 function App() {
+  const {name} = useContext(userContext)
   const [wind, setWind] = useState("");
   const [myLat, setMyLat] = useState("");
   const [myTemp, setMyTemp] = useState("");
@@ -65,6 +67,7 @@ function App() {
   useEffect(() => {
     updateTimeZone();
     updateLocation();
+    console.log(name)
     const API_key = "7851ff08bc91848f850087dc175290a4";
     if (myLon && myLat) {
       let url = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${API_key}&units=metric`;
