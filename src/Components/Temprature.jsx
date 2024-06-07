@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import stromIcon from "../assets/storm.png";
 import mistIcon from "../assets/mist.png";
 import rainIcon from "../assets/rain.png";
 import defaultIcon from "../assets/default.png";
+import UserContext from "../utils/UserContext";
 function Temprature(props) {
-  const { myTemp, sky, img } = props;
+  const { myTemp, sky, img } =  useContext(UserContext);
+;
   const [weatherIcon, setWeatherIcon] = useState(img);
   const handelOnChangeIcon = () => {
     if (sky === "Thunderstorm") {

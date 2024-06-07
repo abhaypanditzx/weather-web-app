@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 function DatePlace(props) {
 
@@ -9,7 +10,7 @@ function DatePlace(props) {
     month,
     city,
     country
-  } = props;
+  } = useContext(UserContext);
   return (
     <div className="flex self-start flex-col sm:ml-5 sm:mt-8 w-fit p-1 h-fit text-white">
       <div className="max-xs:text-sm sm:text-md  capitalize text-white">

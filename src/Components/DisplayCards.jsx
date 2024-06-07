@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import humidityIcon from "../assets/humidity.png";
 import feelsLikeIcon from "../assets/feelsLike.png";
 import windIcon from "../assets/windIcon.png";
 import pressureIcon from "../assets/pressure-.png";
-function Display(props) {
-  const { wind, myHumidity, myPressure, feelsLike } = props;
+import userContext from "../utils/UserContext";
+function Display() {
+  const { wind, myHumidity, myPressure, feelsLike }  = useContext(userContext);
+;
   return (
     <ul className="flex  min-h-full  min-w-full justify-center max-xs:mt-[-10px]  sm:justify-center items-center sm:space-x-10  max-sm:space-y-3 sm:space-y-0 sm:flex-row flex-col">
       <li className=" card-shadow items-center md:w-[200px]  max-xs:h-[70px] max-sm:w-[310px] max-xs:w-[290px]  rounded-xl   justify-around overflow-hidden  sm:rounded-xl min-h-[50px] sm:h-[150px] sm:w-[150px] backdrop-blur-xl max-sm:bg-[#213363] flex sm:flex-col flex-row">
