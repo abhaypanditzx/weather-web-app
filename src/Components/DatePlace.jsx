@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import UserContext from "../utils/UserContext";
 
-function DatePlace(props) {
+function DatePlace() {
 
   const {
     year,
