@@ -67,8 +67,5 @@ const Api = () => {
 
     updateTimeZone();
     updateLocation();
-
-
-
 }
 export default Api;
