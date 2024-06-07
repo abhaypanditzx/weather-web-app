@@ -18,14 +18,14 @@ export const ContextProvider = ({ children }) => {
     const [country, setCountry] = useState("");
     const [city, setCity] = useState("");
     const [isData, setIsData] = useState(false);
-
+const [isLoading, setIsLoading] = useState(true);
     return (
         <UserContext.Provider 
         value={{ myLat, myLon, isData, wind, year, myHumidity,
          myPressure, country, myTemp, feelsLike, day, date, city,
           month, sky, setYear, setDay, setDate, setMonth, setSky ,
           setMyHumidity,setMyPressure,setCountry,setCity,
-          setIsData,setFeelsLike,setMyLat,setMyLon,setWind,setMyTemp}}>
+          setIsData,setFeelsLike,setMyLat,setMyLon,setWind,setMyTemp,isLoading, setIsLoading}}>
             {children}
         </UserContext.Provider>
     )

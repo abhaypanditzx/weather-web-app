@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import mydata from "../Components";
 import { useContext } from "react";
 import userContext from "./UserContext";
 const Api = () => {
-
-    const { myLon, myLat, setYear, setDay, setDate, setMonth ,setIsData,setMyLat,setMyLon,setWind,setMyTemp,setFeelsLike ,setMyHumidity,setMyPressure,setSky,setCountry,setCity} = useContext(userContext);
+    const { myLon, myLat, setYear, setDay, setDate, setMonth ,setIsData,setMyLat,setMyLon,setWind,setMyTemp,setFeelsLike ,setMyHumidity,setMyPressure,setSky,setCountry,setCity,isLoading, setIsLoading,isData} = useContext(userContext);
 
 // getting location 
+
     const updateLocation = () => {
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(function (position) {
@@ -14,9 +15,10 @@ const Api = () => {
                 const longitude = position.coords.longitude;
                 setMyLat(latitude);
                 setMyLon(longitude);
+                
             });
         } else {
-            console.log("Geolocation is not available");
+           console.log('permission denied')
         }
     };
 // checking if we have longitude and latitude  is defined
@@ -26,9 +28,14 @@ const Api = () => {
             let url = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${API_key}&units=metric`;
             searchForData(url);
             setIsData(true)
+            setIsLoading(false)
         } else {
             console.log("Invalid latitude and longitude values.");
-            setIsData(false);
+           setTimeout(()=>{
+        if(isData===  true ){
+             setIsLoading(false)
+}
+           },3000)
         }
     }, [myLat, myLon]);
     // updating timezone 
@@ -56,9 +63,11 @@ const Api = () => {
                 setSky(weather[0].main);
                 setCountry(sys.country);
                 setCity(name);
-                
+                setIsLoading(false);
+                setIsData(true)
             } else {
                 console.log("API request failed" + response.status);
+            
             }
         } catch (error) {
             console.log(error);
